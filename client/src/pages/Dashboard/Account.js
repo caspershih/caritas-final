@@ -39,15 +39,15 @@ const Account = () => (
                                 </tr>
                                 <tr>
                                     <td className="leftTD">Saved Charities:</td>
-                                    <td className="rightTD">10</td>
+                                    <td className="rightTD">3</td>
                                 </tr>
                                 <tr>
                                     <td className="leftTD">Donations this month:</td>
-                                    <td className="rightTD">$20</td>
+                                    <td className="rightTD">$0</td>
                                 </tr>
                                 <tr>
                                     <td className="leftTD">Donations Total::</td>
-                                    <td className="rightTD">$120</td>
+                                    <td className="rightTD">$1000</td>
                                 </tr>
                             </tbody>
                         </table>

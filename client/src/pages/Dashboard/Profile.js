@@ -25,16 +25,8 @@ componentDidMount() {
     axios.get('/user/profile')
     .then(res => {
         this.setState({ User: res.data});
-        // console.log(User[0].firstName);
     });
 }
-
-// editUser = (id) => {
-//     axios.update("/user")
-//   .then(res => {
-//         this.setState({ Users: res.data});
-//   });
-// }
 
 render() {
     return (

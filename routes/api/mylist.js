@@ -8,7 +8,6 @@ const db = require("../../models");
 
 router.get('/', authenticationMiddleware(), function (req, res, next) {
     var id = req.user.user_id
-    console.log(id);
     
     db2.query('SELECT * FROM Selections WHERE UserId = ?',[id], (error, results, fields) => {
         if (error) {

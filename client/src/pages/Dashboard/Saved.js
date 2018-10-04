@@ -17,44 +17,10 @@ class Saved extends Component {
                 cause: ''
                 
             }],
-            showResults: true            
+            showResults: false            
         };
 
-        // this.removeCharity = this.removeCharity.bind(this);
 }
-
-componentDidMount() {
-    axios.get('/api/mylist')
-    .then(res => {
-        this.setState({ nonProfit: res.data});
-        // console.log(res.data);
-    });
-}
-
-
-// removeCharity(event) {
-//     event.preventDefault();
-//     console.log('remove');
-//     const list = event.target.getAttribute('data-index');
-//     const nonProfit = {
-//         id: this.state.nonProfit[list].id
-//     }
-    
-//   axios.post("/api/mylist", nonProfit)
-//   .then(res => {
-//       console.log(res);
-//       console.log(nonProfit);
-//   });
-
-// }
-
-
-// removeCharity = (id) => {
-//     axios.delete("/api/mylist", {params: {id: id}})
-//   .then(res => {
-//         this.setState({ nonProfit: res.data});
-//   });
-// }
 
 showDiv()
     {
@@ -63,6 +29,14 @@ showDiv()
         })
     }
 
+componentDidMount() {
+    axios.get('/api/mylist')
+    .then(res => {
+        this.setState({ nonProfit: res.data});
+        this.setState({showResults: true});
+        // console.log(res.data);
+    });
+}
 
 render() {
     return (

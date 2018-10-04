@@ -21,8 +21,7 @@ router.get('/login', function (req, res) {
 });
 
 router.get('/profile', authenticationMiddleware(), function (req, res, next) {
-    var id = req.user.user_id
-    console.log(id);
+    var id = req.user.user_id    
     
     db2.query('SELECT * FROM users WHERE id = ?',[id], (error, results, fields) => {
         if (error) {
